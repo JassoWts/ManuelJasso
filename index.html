@@ -8,14 +8,21 @@
     <script>/* restore theme */(function(){try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
   </head>
   <body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+    <noscript>
+      <style>body{font-family:system-ui,Segoe UI,Roboto,Arial}</style>
+      <div style="padding:1rem;max-width:720px;margin:2rem auto;color:#334155">
+        Necesitas habilitar JavaScript para ver este sitio.
+      </div>
+    </noscript>
     <!-- Restore correct route if coming from 404 redirect (spa-github-pages) -->
     <script>
+      // Restore route after 404.html redirect for SPA on GitHub Pages
       (function(l) {
         var repoBase = '/ManuelJasso';
-        var search = l.search;
-        if (search && search.indexOf('/?/') !== -1) {
-          var decoded = search.slice(3).split('&').map(function(s) { return s.replace(/\+/g, ' '); }).join('&');
-          var target = decoded.replace(new RegExp('^' + repoBase.replace('/', '\\/') + '\\/'), '/');
+        if (l.search.startsWith('?/')) {
+          var target = l.search.slice(2); // remove "?/"
+          // Ensure leading slash
+          if (target.charAt(0) !== '/') target = '/' + target;
           window.history.replaceState(null, null, repoBase + target + l.hash);
         }
       })(window.location);
