@@ -1,0 +1,149 @@
+<!-- Pixel side-view cat sprite sheet (10 frames, 160x120 each) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="120" viewBox="0 0 1600 120" shape-rendering="crispEdges">
+  <defs>
+    <style>
+      .fur { fill:#5a4632; }
+      .fur2 { fill:#6b5038; }
+      .shadow { fill:#4c3a29; }
+      .eye { fill:#d4f26d; stroke:#1e1e1e; stroke-width:2; }
+      .lid { fill:#2d241b; }
+      .cheek { fill:#e8c4b2; }
+      .nose { fill:#b1645c; }
+      .stripe { fill:#3b2d20; }
+      .z { font:700 16px 'Courier New', monospace; fill:#888; }
+    </style>
+  </defs>
+  <!-- Frame layout: head left, tail right (facing right) -->
+  <!-- Frame 1: idle side -->
+  <g transform="translate(0 0)">
+    <!-- Body -->
+    <rect class="fur" x="50" y="48" width="70" height="50" rx="8"/>
+    <!-- Chest lighter -->
+    <rect class="fur2" x="54" y="58" width="28" height="24" rx="4"/>
+    <!-- Head -->
+    <rect class="fur" x="30" y="38" width="42" height="40" rx="8"/>
+    <rect class="fur" x="30" y="28" width="14" height="16"/> <!-- ear front -->
+    <rect class="fur" x="48" y="28" width="14" height="16"/> <!-- ear back -->
+    <!-- Eye (single visible) -->
+    <circle class="eye" cx="50" cy="60" r="9"/>
+    <!-- Cheek -->
+    <rect class="cheek" x="54" y="66" width="8" height="6" rx="2"/>
+    <!-- Nose/muzzle -->
+    <rect class="fur2" x="58" y="58" width="10" height="8" rx="3"/>
+    <rect class="nose" x="62" y="58" width="4" height="4" rx="1"/>
+    <!-- Tail base -->
+    <rect class="fur" x="116" y="54" width="10" height="26" rx="4"/>
+    <rect class="fur" x="122" y="50" width="22" height="10" rx="4"/>
+    <!-- Stripes -->
+    <rect class="stripe" x="82" y="60" width="10" height="4"/>
+    <rect class="stripe" x="92" y="70" width="10" height="4"/>
+  </g>
+  <!-- Frame 2: blink (eye closed) -->
+  <g transform="translate(160 0)">
+    <rect class="fur" x="50" y="48" width="70" height="50" rx="8"/>
+    <rect class="fur2" x="54" y="58" width="28" height="24" rx="4"/>
+    <rect class="fur" x="30" y="38" width="42" height="40" rx="8"/>
+    <rect class="fur" x="30" y="28" width="14" height="16"/>
+    <rect class="fur" x="48" y="28" width="14" height="16"/>
+    <rect class="lid" x="46" y="58" width="18" height="4" rx="2"/>
+    <rect class="fur2" x="58" y="58" width="10" height="8" rx="3"/>
+    <rect class="nose" x="62" y="58" width="4" height="4" rx="1"/>
+    <rect class="fur" x="116" y="54" width="10" height="26" rx="4"/>
+    <rect class="fur" x="122" y="50" width="22" height="10" rx="4"/>
+  </g>
+  <!-- Frame 3: idle look slight forward (same as 1 for simplicity) -->
+  <g transform="translate(320 0)">
+    <rect class="fur" x="50" y="48" width="70" height="50" rx="8"/>
+    <rect class="fur2" x="54" y="58" width="28" height="24" rx="4"/>
+    <rect class="fur" x="30" y="38" width="42" height="40" rx="8"/>
+    <rect class="fur" x="30" y="28" width="14" height="16"/>
+    <rect class="fur" x="48" y="28" width="14" height="16"/>
+    <circle class="eye" cx="50" cy="60" r="9"/>
+    <rect class="fur2" x="58" y="58" width="10" height="8" rx="3"/>
+    <rect class="nose" x="62" y="58" width="4" height="4" rx="1"/>
+    <rect class="fur" x="116" y="54" width="10" height="26" rx="4"/>
+    <rect class="fur" x="122" y="50" width="22" height="10" rx="4"/>
+  </g>
+  <!-- Frame 4: ear twitch (move front ear) -->
+  <g transform="translate(480 0)">
+    <rect class="fur" x="50" y="48" width="70" height="50" rx="8"/>
+    <rect class="fur2" x="54" y="58" width="28" height="24" rx="4"/>
+    <rect class="fur" x="30" y="38" width="42" height="40" rx="8"/>
+    <rect class="fur" x="30" y="26" width="14" height="16"/>
+    <rect class="fur" x="48" y="28" width="14" height="16"/>
+    <circle class="eye" cx="50" cy="60" r="9"/>
+    <rect class="fur2" x="58" y="58" width="10" height="8" rx="3"/>
+    <rect class="nose" x="62" y="58" width="4" height="4" rx="1"/>
+    <rect class="fur" x="116" y="54" width="10" height="26" rx="4"/>
+    <rect class="fur" x="122" y="50" width="22" height="10" rx="4"/>
+  </g>
+  <!-- Frame 5: sleep start (lower head slightly) -->
+  <g transform="translate(640 0)">
+    <rect class="fur" x="50" y="50" width="70" height="48" rx="8"/>
+    <rect class="fur2" x="54" y="60" width="28" height="22" rx="4"/>
+    <rect class="fur" x="30" y="40" width="42" height="38" rx="8"/>
+    <rect class="fur" x="30" y="30" width="14" height="16"/>
+    <rect class="fur" x="48" y="30" width="14" height="16"/>
+    <rect class="lid" x="46" y="58" width="18" height="4" rx="2"/>
+    <rect class="fur" x="116" y="56" width="10" height="24" rx="4"/>
+    <rect class="fur" x="122" y="52" width="22" height="10" rx="4"/>
+  </g>
+  <!-- Frame 6: sleep deep (Z) -->
+  <g transform="translate(800 0)">
+    <rect class="fur" x="50" y="50" width="70" height="48" rx="8"/>
+    <rect class="fur2" x="54" y="60" width="28" height="22" rx="4"/>
+    <rect class="fur" x="30" y="40" width="42" height="38" rx="8"/>
+    <rect class="fur" x="30" y="30" width="14" height="16"/>
+    <rect class="fur" x="48" y="30" width="14" height="16"/>
+    <text class="z" x="126" y="44">Z</text>
+  </g>
+  <!-- Walk cycle frames 7-10: shift legs & tail -->
+  <g transform="translate(960 0)">
+    <rect class="fur" x="52" y="50" width="68" height="48" rx="8"/>
+    <rect class="fur2" x="56" y="60" width="26" height="22" rx="4"/>
+    <rect class="fur" x="32" y="40" width="42" height="38" rx="8"/>
+    <rect class="fur" x="32" y="30" width="14" height="16"/>
+    <rect class="fur" x="50" y="30" width="14" height="16"/>
+    <circle class="eye" cx="52" cy="60" r="9"/>
+    <rect class="fur" x="118" y="56" width="10" height="24" rx="4"/>
+    <rect class="fur" x="124" y="52" width="20" height="10" rx="4"/>
+    <rect class="shadow" x="60" y="90" width="12" height="6" rx="2"/>
+    <rect class="shadow" x="96" y="92" width="14" height="6" rx="2"/>
+  </g>
+  <g transform="translate(1120 0)">
+    <rect class="fur" x="52" y="50" width="68" height="48" rx="8"/>
+    <rect class="fur2" x="56" y="60" width="26" height="22" rx="4"/>
+    <rect class="fur" x="32" y="40" width="42" height="38" rx="8"/>
+    <rect class="fur" x="32" y="30" width="14" height="16"/>
+    <rect class="fur" x="50" y="30" width="14" height="16"/>
+    <circle class="eye" cx="52" cy="60" r="9"/>
+    <rect class="fur" x="118" y="56" width="10" height="24" rx="4"/>
+    <rect class="fur" x="124" y="54" width="20" height="10" rx="4"/>
+    <rect class="shadow" x="64" y="92" width="12" height="6" rx="2"/>
+    <rect class="shadow" x="92" y="90" width="14" height="6" rx="2"/>
+  </g>
+  <g transform="translate(1280 0)">
+    <rect class="fur" x="52" y="50" width="68" height="48" rx="8"/>
+    <rect class="fur2" x="56" y="60" width="26" height="22" rx="4"/>
+    <rect class="fur" x="32" y="40" width="42" height="38" rx="8"/>
+    <rect class="fur" x="32" y="30" width="14" height="16"/>
+    <rect class="fur" x="50" y="30" width="14" height="16"/>
+    <circle class="eye" cx="52" cy="60" r="9"/>
+    <rect class="fur" x="118" y="56" width="10" height="24" rx="4"/>
+    <rect class="fur" x="124" y="52" width="20" height="10" rx="4"/>
+    <rect class="shadow" x="60" y="92" width="12" height="6" rx="2"/>
+    <rect class="shadow" x="96" y="90" width="14" height="6" rx="2"/>
+  </g>
+  <g transform="translate(1440 0)">
+    <rect class="fur" x="52" y="50" width="68" height="48" rx="8"/>
+    <rect class="fur2" x="56" y="60" width="26" height="22" rx="4"/>
+    <rect class="fur" x="32" y="40" width="42" height="38" rx="8"/>
+    <rect class="fur" x="32" y="30" width="14" height="16"/>
+    <rect class="fur" x="50" y="30" width="14" height="16"/>
+    <circle class="eye" cx="52" cy="60" r="9"/>
+    <rect class="fur" x="118" y="56" width="10" height="24" rx="4"/>
+    <rect class="fur" x="124" y="54" width="20" height="10" rx="4"/>
+    <rect class="shadow" x="64" y="90" width="12" height="6" rx="2"/>
+    <rect class="shadow" x="92" y="92" width="14" height="6" rx="2"/>
+  </g>
+</svg>
