@@ -8,6 +8,18 @@
     <script>/* restore theme */(function(){try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
   </head>
   <body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+    <!-- Restore correct route if coming from 404 redirect (spa-github-pages) -->
+    <script>
+      (function(l) {
+        var repoBase = '/ManuelJasso';
+        var search = l.search;
+        if (search && search.indexOf('/?/') !== -1) {
+          var decoded = search.slice(3).split('&').map(function(s) { return s.replace(/\+/g, ' '); }).join('&');
+          var target = decoded.replace(new RegExp('^' + repoBase.replace('/', '\\/') + '\\/'), '/');
+          window.history.replaceState(null, null, repoBase + target + l.hash);
+        }
+      })(window.location);
+    </script>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
