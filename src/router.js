@@ -8,7 +8,7 @@ import Education from './sections/EducationSection.vue';
 import Contact from './sections/ContactSection.vue';
 
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'about', component: About },
     { path: '/experiencia', name: 'experience', component: Experience },

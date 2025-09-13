@@ -53,7 +53,7 @@ async function downloadCV() {
   if (downloading.value) return;
   downloading.value = true;
   downloadError.value = false;
-  const filePath = '/cv.pdf';
+  const filePath = new URL(`${import.meta.env.BASE_URL}cv.pdf`, window.location.href).toString();
   try {
     const res = await fetch(filePath, { cache: 'no-store' });
     if (!res.ok) throw new Error('not ok');

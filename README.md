@@ -50,6 +50,20 @@ npm install
 npm run dev
 ```
 
+## Deploy en GitHub Pages
+Este repo está listo para Pages.
+
+1. En GitHub, ve a `Settings > Pages` y en "Build and deployment" selecciona:
+  - Source: `GitHub Actions`.
+2. Empuja a `main` para disparar el workflow `Deploy to GitHub Pages`.
+3. La web quedará disponible en:
+  - `https://JassoWts.github.io/ManuelJasso/`
+
+Detalles técnicos:
+- `vite.config.js` define `base` como `/ManuelJasso/` solo en producción, para que los assets resuelvan correctamente en Pages.
+- `src/router.js` usa `createWebHistory(import.meta.env.BASE_URL)` para que el enrutador respete esa base.
+- Workflow: `.github/workflows/deploy-pages.yml` construye con `npm ci && npm run build` y publica `dist/` en Pages.
+
 ## Tests
 ```bash
 npm test
